@@ -2,6 +2,7 @@ import numpy as np
 from numpy.polynomial import Polynomial as P
 import scipy.integrate
 import matplotlib.pyplot as plt
+import sympy as sp
 
 #Question 1
 def recurrence_relation(n:int,a0:int,a1:int) -> np.array:
@@ -31,6 +32,7 @@ def sketch_series_solutions(y0_poly, y1_poly):
     plt.xlim(-3,3)
     plt.ylim(-10,10)
     plt.show()
+
 
 def main():
     y0_poly, y1_poly = series(10)
