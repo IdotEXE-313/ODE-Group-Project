@@ -32,7 +32,11 @@ def sketch_series_solutions(y0_poly, y1_poly):
     plt.ylim(-10,10)
     plt.show()
 
-y0_poly, y1_poly = series(10)
-sketch_series_solutions(y0_poly, y1_poly)
+def main():
+    y0_poly, y1_poly = series(10)
+    sketch_series_solutions(y0_poly, y1_poly)
+
+if __name__ == "__main__":
+    main()
 
 
