@@ -1,7 +1,5 @@
 import numpy as np
 from numpy.polynomial import Polynomial as P
-from functools import lru_cache
-import scipy.integrate
 import matplotlib.pyplot as plt
 import sympy as sp
 
@@ -47,7 +45,7 @@ def sketch_series_solutions(y0_poly, y1_poly):
 
 
 def main():
-    y0_poly, y1_poly = series(100000) #Place holder, will calculate 8 terms (since a0, a1 already defined)
+    y0_poly, y1_poly = series(10) #Place holder, will calculate 8 terms (since a0, a1 already defined)
     sketch_series_solutions(y0_poly, y1_poly)
 
 if __name__ == "__main__":
