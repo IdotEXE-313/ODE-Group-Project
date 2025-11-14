@@ -26,8 +26,8 @@ def sketch_series_solutions(y0_poly, y1_poly):
 
     x = np.linspace(-3,3,num=100)
 
-    plt.plot(x,y0_poly(x),label="y=1+x^2")
-    plt.plot(x, y1_poly(x), label="y=x+x^3/3-x^5/15+...")
+    # plt.plot(x,y0_poly(x),label="y=1+x^2")
+    # plt.plot(x, y1_poly(x), label="y=x+x^3/3-x^5/15+...")
     plt.plot(x, y0_poly(x) + y1_poly(x), label="y=solution")
     plt.xlim(-3,3)
     plt.ylim(-10,10)
@@ -38,7 +38,6 @@ def main():
     y0_poly, y1_poly = series(10)
     sketch_series_solutions(y0_poly, y1_poly)
 
-if __name__ == "__main__":
-    main()
+main()
 
 
