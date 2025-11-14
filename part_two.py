@@ -33,7 +33,13 @@ def general_solution():
     general_sol_two = sol_two * sp.integrate(integrand_two, x)
     return general_sol_one+general_sol_two
 
-print(general_solution())
+if __name__ == "__main__":
+
+    f_numeric = sp.lambdify(x, general_solution(), modules=['numpy'])
+    x = np.linspace(-3,3,100)
+    y = f_numeric(x)
+    plt.plot(x, y, label="general solution")
+    plt.show()
 
 
 
